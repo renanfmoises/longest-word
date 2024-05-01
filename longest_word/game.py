@@ -1,11 +1,7 @@
-# pylint: disable=missing-docstring
-# pylint: disable=too-few-public-methods
-
-"""This module contains the Game class. It is used to play the game."""
-
 import random
 import string
 import requests
+
 
 class Game:
     def __init__(self) -> list:
