@@ -1,3 +1,6 @@
+# pylint: disable=missing-docstring
+# pylint: disable=too-few-public-methods
+
 """This module contains the Game class. It is used to play the game."""
 
 import string
@@ -22,3 +25,9 @@ class Game:
             else:
                 return False
         return True
+
+    @staticmethod
+    def __check_dictionary(word):
+        response = requests.get(f"https://wagon-dictionary.herokuapp.com/{word}")
+        json_response = response.json()
+        return json_response['found']
