@@ -36,6 +36,7 @@ def test_empty_word_is_invalid(self):
         assert new_game.grid == list(test_grid) # Make sure the grid remained untouched
 
     def test_is_invalid(self):
+
         # setup
         new_game = Game()
         test_grid = 'KWEUEAKRZ'
