@@ -3,7 +3,6 @@
 # pylint: disable=too-few-public-methods
 
 import string
-import requests
 from longest_word.game import Game
 
 
