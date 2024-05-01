@@ -1,6 +1,9 @@
 # tests/test_game.py
-from longest_word.game import Game
+# pylint: disable=missing-docstring
+# pylint: disable=too-few-public-methods
+
 import string
+from longest_word.game import Game
 
 class TestGame:
     def test_game_initialization(self):
@@ -46,3 +49,9 @@ class TestGame:
         assert new_game.is_valid(test_word) is False
         # teardown
         assert new_game.grid == list(test_grid) # Make sure the grid remained untouched
+
+    def test_unknown_word_is_invalid(self):
+        """A word that is not in the english directory should no be valid"""
+        new_game = Game()
+        new_game.grid = list('KWIENFUQW') # Force the grid to a test case:
+        assert new_game.is_valid('FEUN') is False
